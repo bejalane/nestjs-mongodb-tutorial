@@ -19,7 +19,7 @@ export class ItemsController {
     }
 
     @Post()
-    async create(@Body() createItemDto: CreateItemDto): Promise<any> {
+    async create(@Body() createItemDto: CreateItemDto): Promise<Item> {
         return this.itemsService.create(createItemDto);
     }
 

@@ -16,7 +16,7 @@ export class ItemsService {
         return await this.itemModel.findOne({_id: id});
     }
 
-    async create(createItemDto: CreateItemDto): Promise<any> {
+    async create(createItemDto: CreateItemDto): Promise<Item> {
         const createdItem = new this.itemModel(createItemDto);
         return await createdItem.save(createdItem);
     }
